@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI LOOKSMAX</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #09090f;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      padding: 25px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #252535;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #b58aff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 110px 20px 80px;
+    }
+
+    .tag {
+      color: #bd91ff;
+      letter-spacing: 3px;
+      font-size: 12px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 7vw, 75px);
+      margin: 25px 0;
+    }
+
+    h1 span {
+      color: #a66aff;
+    }
+
+    .hero p {
+      color: #aaaabd;
+      max-width: 550px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    .upload {
+      margin: 40px auto;
+      padding: 35px;
+      max-width: 480px;
+      border: 1px solid #7442a8;
+      background: #151321;
+      border-radius: 18px;
+    }
+
+    input {
+      margin-top: 20px;
+      max-width: 100%;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 8px;
+      background: #9654ed;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #b17cff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">AI LOOKSMAX</div>
+    <div>YOUR AI GROOMING COACH</div>
+  </nav>
+
+  <section class="hero">
+    <div class="tag">THE FUTURE OF SELF IMPROVEMENT</div>
+    <h1>UNLOCK YOUR <span>POTENTIAL.</span></h1>
+    <p>
+      Discover personalized grooming, skincare and
+      hairstyle recommendations with AI-powered insights.
+      Build confidence and improve yourself every day.
+    </p>
+
+    <div class="upload">
+      <h2>AI FACE ANALYSIS</h2>
+      <p>Upload a photo to get started.</p>
+      <input type="file" accept="image/*" id="photo">
+      <br>
+      <button onclick="analyze()">START ANALYSIS</button>
+      <p id="result"></p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 AI LOOKSMAX. SELF IMPROVEMENT STARTS HERE.
+  </footer>
+
+  <script>
+    function analyze() {
+      const photo = document.getElementById("photo");
+      const result = document.getElementById("result");
+
+      if (!photo.files.length) {
+        result.textContent = "Please upload a photo first.";
+        return;
+      }
+
+      result.textContent =
+        "Photo selected! AI analysis integration is coming soon.";
+    }
+  </script>
+
+</body>
+</html>
